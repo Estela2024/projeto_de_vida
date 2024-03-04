@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap'); 
+ 
+/*criando variáveis*/
+:root { 
+    --cor-de-fundo: #970707; 
+    --branco: #f7efef; 
+    --branco: #FFFFFF; 
+    --botao-ativo: hsl(0, 97%, 27%); 
+    --botao-inativo: rgb(148, 0, 0); 
+    --texto-fundo: rgba(165, 0, 0, 0.904);
+}
