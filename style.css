@@ -2,17 +2,17 @@
  
 /*criando variáveis*/
 :root { 
-    --cor-de-fundo: #f3656cf8; 
-    --branco: #f7efef; 
+    --cor-de-fundo: #2c3e91f8; 
+    --branco: #99dbf0; 
     --branco: #FFFFFF; 
-    --botao-ativo: hsl(0, 97%, 27%); 
-    --botao-inativo: rgb(148, 0, 0); 
-    --texto-fundo: rgba(165, 0, 0, 0.904);
+    --botao-ativo: hsl(253, 70%, 40%); 
+    --botao-inativo: rgb(99, 155, 218); 
+    --texto-fundo: rgba(91, 202, 230, 0.904);
 }
 
 body{
     background-color: var(--cor-de-fundo);
-    color: #f7efef;
+    color: #6fa1e2;
     color: #000;
 }.conteudo-principal {
     display: flex;
