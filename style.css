@@ -2,7 +2,7 @@
  
 /*criando variáveis*/
 :root { 
-    --cor-de-fundo: #2c3e91f8; 
+    --cor-de-fundo: #000000f8; 
     --branco: #99dbf0; 
     --branco: #FFFFFF; 
     --botao-ativo: hsl(253, 70%, 40%); 
@@ -13,7 +13,7 @@
 body{
     background-color: var(--cor-de-fundo);
     color: #6fa1e2;
-    color: #000;
+    color: #ffffff;
 }.conteudo-principal {
     display: flex;
     flex-direction: column;
