@@ -1,3 +1,5 @@
+
+//Aula10
 const botoes = document.querySelectorAll(".botao");
 const textos = document.querySelectorAll(".aba-conteudo");
 
@@ -15,12 +17,12 @@ for (let i = 0; i < botoes.length; i++) {
 }
 
 const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2024-09-05T00:00:00");
-const tempoObjetivo2 = new Date("2024-10-30T00:00:00"); //adicionado
-const tempoObjetivo3 = new Date("2024-11-05T00:00:00"); //adicionado
-const tempoObjetivo4 = new Date("2024-12-30T00:00:00"); //adicionado
+const tempoObjetivo1 = new Date("2024-05-30T00:00:00");
+const tempoObjetivo2 = new Date("2024-12-06T00:00:00"); //adicionado
+const tempoObjetivo3 = new Date("2024-12-20T00:00:00"); //adicionado
+const tempoObjetivo4 = new Date("2024-12-11T00:00:00"); //adicionado
 
-const tempos = [tempoObjetivo1,tempoObjetivo2,tempoObjetivo3,tempoObjetivo4];//adicionado
+const tempos = [tempoObjetivo1,tempoObjetivo2,tempoObjetivo3,tempoObjetivo4];
 
 function calculaTempo(tempoObjetivo) {
     let tempoAtual = new Date();
@@ -33,26 +35,25 @@ function calculaTempo(tempoObjetivo) {
     segundos %= 60;
     minutos %= 60;
     horas %= 24;
- 
     if (tempoFinal > 0){
-        return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos"; //adicionado dentro do if
+        return [dias,horas,minutos,segundos];
     } else {
-        return "Prazo Finalizado";
+        return [0,0,0,0];
     }
 }
 
-function atualizaCronometro(){ //adicionado
-    for (let i=0; i<contadores.length;i++){ //adicionado
-        contadores[i].textContent = calculaTempo(tempos[i]);  //adicionado
+function atualizaCronometro(){ //adicionar aula10
+    for (let i=0; i<contadores.length;i++){
+        document.getElementById("dias"+i).textContent = calculaTempo(tempos[i])[0];
+        document.getElementById("horas"+i).textContent = calculaTempo(tempos[i])[1];
+        document.getElementById("min"+i).textContent = calculaTempo(tempos[i])[2];
+        document.getElementById("seg"+i).textContent = calculaTempo(tempos[i])[3];   
     }
 }
 
-function comecaCronometro(){ //adicionado
-    atualizaCronometro(); //adicionado
-    setInterval(atualizaCronometro,1000); //adicionado
+function comecaCronometro(){
+    atualizaCronometro();
+    setInterval(atualizaCronometro,1000);
 }
 
-comecaCronometro(); //adicionado
-
-
-
+comecaCronometro();
